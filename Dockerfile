@@ -10,4 +10,4 @@ RUN pipenv install --system --deploy
 
 COPY . .
 
-CMD [ "waitress-serve", "--listen=0.0.0.0:8877", "deploy_finalmodel:app" ]
+CMD [ "waitress-serve", "--listen=0.0.0.0:10000", "deploy_finalmodel:app" ]
