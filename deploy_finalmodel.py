@@ -21,7 +21,7 @@ app = Flask('churn')
 
 @ app.route('/predict', methods= ['POST'])
 def churn_predict():
-
+    
     customer = request.get_json()
     threshold = customer['threshold']
 
@@ -34,6 +34,11 @@ def churn_predict():
     customer_churn = {'churn': bool((model.predict_proba(customer_x)[:, 1] > threshold).astype(int)), 'probability': model.predict_proba(customer_x)[0, 1]}
 
     return jsonify(customer_churn)
+
+@ app.route('/hello', methods= ['GET'])
+def say_hello():
+
+    print('Welcome to my page')
 
 if __name__ == '__main__':
     app.run(debug=True, host= 'localhost', port= 8866)
