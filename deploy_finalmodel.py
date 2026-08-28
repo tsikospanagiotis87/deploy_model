@@ -38,7 +38,7 @@ def churn_predict():
 @ app.route('/hello', methods= ['GET'])
 def say_hello():
 
-    print('Welcome to my page')
+    return "WELCOME to My WebPage, Hello from Panagiotis"
 
 if __name__ == '__main__':
     app.run(debug=True, host= 'localhost', port= 8866)
