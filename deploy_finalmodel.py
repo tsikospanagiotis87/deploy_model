@@ -40,6 +40,11 @@ def say_hello():
 
     return "WELCOME to My WebPage, Hello from Panagiotis"
 
+@ app.route('/oksana', methods=['GET'])
+def oksana_hello():
+
+    return "Hello From Oksana-Alexandra"
+
 if __name__ == '__main__':
     app.run(debug=True, host= 'localhost', port= 8866)
 
